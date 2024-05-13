@@ -1,0 +1,100 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    font-family: Lexend, Arial, Helvetica, sans-serif;
+}
+
+p {margin: 0px;}
+
+.subetekoto::-webkit-scrollbar {
+    display: none;
+}
+
+.subetekoto {
+    height: 80vh;
+    width: 300px;
+    padding: 16px;
+    position: fixed;
+    background-color: white;
+    border: 3px solid black;
+    top: calc(10% - 16px);
+    left: calc((100% - 332px) / 2);
+    border-radius: 16px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: 0;
+    box-shadow: 0px 0px 9px rgb(127,127,127);
+}
+
+.albumartcontainer {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.albummetadata {
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.datatitle {
+    font-size: 22px;
+    text-align: center;
+}
+
+.dataartist {
+    font-size: 17px;
+    text-align: center;
+}
+
+.albumartimage {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 532px) {
+    .subetekoto {
+        top: 0px;
+        left: 0px;
+        width: calc(100% - 32px);
+        height: calc(100% - 32px);
+        border: none;
+        box-shadow: none;
+    }
+    .albumartcontainer {
+        width: 100%;
+        height: calc(100vw - 32px);
+    }
+}
+
+.item-link {
+    width: calc(100% - 16px);
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    margin-top: 5px;
+    text-decoration: none;
+    box-shadow: 0px 0px 9px rgb(127,127,127);
+}
+
+.item-link.hidden { display: none }
+
+.item-link img {
+    height: 32px;
+    width: 32px;
+}
+
+.item-link p {
+    font-size: 24px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    width: calc(100% - 32px - 4px);
+    margin-left: 4px;
+}
